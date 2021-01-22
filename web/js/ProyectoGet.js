@@ -40,14 +40,14 @@ function agregarTarea(idProyecto) {
             .done(function (msg) {
                 $('#tabla').html(msg);
             });
-            
+
     $('#nombre').val('');
     $('#descripcion').val('');
     $('#fechaFinal').val('');
     $('#fechaInicio').val('');
 }
 
-function completarTarea(idTarea){
+function completarTarea(idTarea) {
     $.ajax({
         method: "POST",
         url: "completarTarea",
@@ -58,6 +58,24 @@ function completarTarea(idTarea){
     })
             .done(function (msg) {
                 $('#tabla').html(msg);
+            });
+}
+
+function borrarProyecto() {
+    $.ajax({
+        method: "POST",
+        url: "borrarProyecto",
+        data: {
+            idProject: getUrlParameter('proyecto')
+        }
+    })
+            .done(function (msg) {
+                Swal.fire(
+                        'Hey!',
+                        'Eliminaste un proyecto correctamente',
+                        'success'
+                        );
+                window.location = 'index.html';
             });
 }
 
