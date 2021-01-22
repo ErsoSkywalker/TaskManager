@@ -12,6 +12,14 @@
         <servlet-name>agregarTarea</servlet-name>
         <servlet-class>logica.agregarTarea</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>completarTarea</servlet-name>
+        <servlet-class>logica.completarTarea</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>agregarProyecto</servlet-name>
+        <servlet-class>logica.agregarProyecto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProyectosMain</servlet-name>
         <url-pattern>/ProyectosMain</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>agregarTarea</servlet-name>
         <url-pattern>/agregarTarea</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>completarTarea</servlet-name>
+        <url-pattern>/completarTarea</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>agregarProyecto</servlet-name>
+        <url-pattern>/agregarProyecto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

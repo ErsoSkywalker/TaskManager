@@ -125,7 +125,7 @@ public class GimmeProyect extends HttpServlet {
                             + "                            <td>" + res2.getString("FechaFinal") + "</td>\n"
                             + "                            <td>" + res2.getString("Estatus") + "</td>\n");
                             if(res2.getString("Estatus").equalsIgnoreCase("Activa"))
-                                out.println("<td><button class=\"uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom\" id=\"botonCompletar\">Completar</button></td>\n");
+                                out.println("<td><button class=\"uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom\" id=\"botonCompletar\" onclick=\"completarTarea("+res2.getString("idTarea")+")\">Completar</button></td>\n");
                             out.println("                        </tr>\n");
                 }
 

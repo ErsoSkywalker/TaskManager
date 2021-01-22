@@ -41,23 +41,23 @@
 
 
                     <div class="uk-margin">
-                        <h4>Nombre Proyecto: </h4><input class="uk-input uk-form-width-large" type="text" name="nombre" placeholder="Inserta tu texto">
+                        <h4>Nombre Proyecto: </h4><input class="uk-input uk-form-width-large" type="text" name="nombre" id="nombre" placeholder="Inserta tu texto">
                     </div>
 
                     <div class="uk-margin">
-                        <h4>Responsable: </h4><input class="uk-input uk-form-width-large" type="text" name="responsable" placeholder="Inserta tu texto">
+                        <h4>Responsable: </h4><input class="uk-input uk-form-width-large" type="text" name="responsable" id="responsable" placeholder="Inserta tu texto">
                     </div>
 
                     <div class="uk-margin">
-                        <h4>Fecha Inicio: </h4><input class="uk-input uk-form-width-large" type="date" name="fechaInicio" placeholder="Inserta tu fecha">
+                        <h4>Fecha Inicio: </h4><input class="uk-input uk-form-width-large" type="date" name="fechaInicio" id="fechaInicio" placeholder="Inserta tu fecha">
                     </div>
 
                     <div class="uk-margin">
-                        <h4>Fecha Final: </h4><input class="uk-input uk-form-width-large" name="fechaFinal" type="date" placeholder="Inserta tu fecha">
+                        <h4>Fecha Final: </h4><input class="uk-input uk-form-width-large" name="fechaFinal" id="fechaFinal" type="date" placeholder="Inserta tu fecha">
                     </div>
 
                     <div class="uk-margin">
-                        <h4>Descripción: </h4><textarea class="uk-input uk-form-width-large" name="descripcion" placeholder="Inserta tu texto"></textarea>
+                        <h4>Descripción: </h4><textarea class="uk-input uk-form-width-large" name="descripcion" id="descripcion" placeholder="Inserta tu texto"></textarea>
                     </div>
                 </div>
                 <button class="uk-button uk-button-primary uk-button-large" id="agregar">Agregar</button>
@@ -65,7 +65,9 @@
         </div>
 
         <br>
-
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="js/agregarProyecto.js" type="text/javascript"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.13/dist/js/uikit.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.13/dist/js/uikit-icons.min.js"></script>
     </body>

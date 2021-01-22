@@ -8,19 +8,19 @@ package logica;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import BD.cDatos;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 /**
  *
  * @author conti
  */
-public class agregarTarea extends HttpServlet {
+public class completarTarea extends HttpServlet {
     cDatos bd = new cDatos();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,10 +39,10 @@ public class agregarTarea extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet agregarTarea</title>");            
+            out.println("<title>Servlet completarTarea</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet agregarTarea at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet completarTarea at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,7 +60,7 @@ public class agregarTarea extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
     }
 
     /**
@@ -91,7 +91,7 @@ public class agregarTarea extends HttpServlet {
                         + "                    </thead>\n"
                         + "                    <tbody>\n");
                         
-                ResultSet res2 = bd.consulta("call spAgregarTarea(" + request.getParameter("idProject") + ",'"+request.getParameter("NombreTarea")+"','"+request.getParameter("DescripcionTarea")+"','"+request.getParameter("FechaInicio")+"','"+request.getParameter("FechaFinal")+"');");
+                ResultSet res2 = bd.consulta("call spCompletarTarea("+request.getParameter("idTarea")+", "+request.getParameter("idProject")+");");
                 while (res2.next()) {
                     out.println(
                             "                        <tr>\n"
@@ -112,8 +112,6 @@ public class agregarTarea extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(agregarTarea.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
     }
 
     /**

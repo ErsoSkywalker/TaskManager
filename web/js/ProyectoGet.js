@@ -32,9 +32,28 @@ function agregarTarea(idProyecto) {
         data: {
             idProject: idProyecto,
             NombreTarea: $('#nombre').val(),
-            DescripcionTarea: $('#fechaInicio').val(),
+            DescripcionTarea: $('#descripcion').val(),
             FechaInicio: $('#fechaFinal').val(),
-            FechaFinal: $('#descripcion').val()
+            FechaFinal: $('#fechaInicio').val()
+        }
+    })
+            .done(function (msg) {
+                $('#tabla').html(msg);
+            });
+            
+    $('#nombre').val('');
+    $('#descripcion').val('');
+    $('#fechaFinal').val('');
+    $('#fechaInicio').val('');
+}
+
+function completarTarea(idTarea){
+    $.ajax({
+        method: "POST",
+        url: "completarTarea",
+        data: {
+            idTarea: idTarea,
+            idProject: getUrlParameter('proyecto')
         }
     })
             .done(function (msg) {
