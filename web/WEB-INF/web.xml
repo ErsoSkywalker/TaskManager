@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ProyectosMain</servlet-name>
+        <servlet-class>logica.ProyectosMain</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GimmeProyect</servlet-name>
+        <servlet-class>logica.GimmeProyect</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>agregarTarea</servlet-name>
+        <servlet-class>logica.agregarTarea</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProyectosMain</servlet-name>
+        <url-pattern>/ProyectosMain</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GimmeProyect</servlet-name>
+        <url-pattern>/GimmeProyect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>agregarTarea</servlet-name>
+        <url-pattern>/agregarTarea</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

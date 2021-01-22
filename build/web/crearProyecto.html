@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Crear Proyecto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.13/dist/css/uikit.min.css" />
+    </head>
+    <body bgcolor="#222">
+        <!-- Barra de navegación -->
+        <nav class="uk-navbar-container uk-margin " uk-navbar>
+            <div class="uk-navbar-center">
+
+                <div class="uk-navbar-center-left"><div>
+                        <ul class="uk-navbar-nav">
+                            <li class="uk-active"><a href="index.html">Ver Proyectos</a></li>
+                        </ul>
+                    </div></div>
+                <a class="uk-navbar-item uk-logo" href="index.html">WorkList</a>
+                <div class="uk-navbar-center-right"><div>
+                        <ul class="uk-navbar-nav">
+                            <li><a href="crearProyecto.html">Nuevo Proyecto</a></li>
+                        </ul>
+                    </div></div>
+
+            </div>
+        </nav>
+
+
+        <!-- Formulario -->
+
+        <div class="uk-container">
+            <div align="center">
+
+
+                <div class="uk-background-secondary uk-light uk-padding uk-panel">
+                    <h1>
+                        Crear Proyecto
+                    </h1>
+
+
+                    <div class="uk-margin">
+                        <h4>Nombre Proyecto: </h4><input class="uk-input uk-form-width-large" type="text" name="nombre" placeholder="Inserta tu texto">
+                    </div>
+
+                    <div class="uk-margin">
+                        <h4>Responsable: </h4><input class="uk-input uk-form-width-large" type="text" name="responsable" placeholder="Inserta tu texto">
+                    </div>
+
+                    <div class="uk-margin">
+                        <h4>Fecha Inicio: </h4><input class="uk-input uk-form-width-large" type="date" name="fechaInicio" placeholder="Inserta tu fecha">
+                    </div>
+
+                    <div class="uk-margin">
+                        <h4>Fecha Final: </h4><input class="uk-input uk-form-width-large" name="fechaFinal" type="date" placeholder="Inserta tu fecha">
+                    </div>
+
+                    <div class="uk-margin">
+                        <h4>Descripción: </h4><textarea class="uk-input uk-form-width-large" name="descripcion" placeholder="Inserta tu texto"></textarea>
+                    </div>
+                </div>
+                <button class="uk-button uk-button-primary uk-button-large" id="agregar">Agregar</button>
+            </div>
+        </div>
+
+        <br>
+
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.13/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.13/dist/js/uikit-icons.min.js"></script>
+    </body>
+</html>
